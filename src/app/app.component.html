@@ -1,0 +1,13 @@
+
+<table *ngIf="books">
+  <tr>
+    <th>Authors</th>
+    <th>Categories</th>
+    <th>Published Date</th>
+  </tr>
+  <tr *ngFor="let book of books">   
+    <td>{{ book.volumeInfo.authors ? book.volumeInfo.authors[0] : '---'}}</td>
+    <td>{{ book.volumeInfo.categories ? book.volumeInfo.categories[0] : '---'}}</td>
+    <td>{{ book.volumeInfo.publishedDate}}</td>
+  </tr>
+</table>
